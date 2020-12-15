@@ -21,3 +21,7 @@ module.exports.signup = function(req,res){
 module.exports.signin = function(req,res){
     res.render('signin');
 }
+
+module.exports.main = function(req,res){
+    res.render('main');
+}
