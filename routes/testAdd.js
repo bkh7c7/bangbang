@@ -15,6 +15,16 @@ module.exports.roomate = function(req,res){
 module.exports.roomdetail = function(req,res){
     res.render('roomdetail');
 }
+module.exports.roomdetail1 = function(req,res){
+    res.render('roomdetail1');
+}
+module.exports.roomdetail2 = function(req,res){
+    res.render('roomdetail2');
+}
+module.exports.roomdetail3 = function(req,res){
+    res.render('roomdetail3');
+}
+
 module.exports.signup = function(req,res){
     res.render('signup');
 }

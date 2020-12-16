@@ -13,6 +13,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/userData.js"></script>
 
     
     <style type="text/css">
@@ -85,8 +86,10 @@
             <li style="font-size: 15px; "><a href="roomate" style="color: red;">Roommates</a></li>
             <li style="font-size: 15px; "><a href="community" style="color: black;">Community</a></li>
             <li style="font-size: 15px; "><a href="notice" style="color: black;">Notice</a></li>
-            <li style="font-size: 15px;"><a href="signup" style="color:lightgrey;">Sign up</a></li>
-            <li style="font-size: 15px;"><a href="signin" style="color:lightgrey;">Sign in</a></li>
+            <li id="logN1" style="font-size: 15px;"><a href="signup" style="color:lightgrey;">Sign up</a></li>
+            <li id="logN2" style="font-size: 15px;"><a href="signin" style="color:lightgrey;">Sign in</a></li>
+            <li id="logY1" style="font-size: 15px;"><a href="main" style="color:lightgrey;">My Page</a></li>
+            <li id="logY2" style="font-size: 15px;"><a id="logoutId" style="color:lightgrey; cursor: pointer;">Log Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -289,20 +292,20 @@
 
         });
         
-        function init(){
-          //$("#romm2_1").css("display","none");
-          //$("#myProfileId1").click()
+        $("#logoutId").on("click", function(){
+            localStored = "";
+          })
 
-        }
-        init();
-        
-        // setTimeout(function tick(){
-        //   if(gps_check().val1 == null){
-        //     //setTimeout(tick, 3000);
-        //   }else{
-        //     //console.log(gps_check());
-        //   }
-        // });
+          function init(){
+            if(localStored !=""){
+              $("#logN1,#logN2").css("display","none");
+              $("#logY1,#logY2").css("display","block");
+            }else{
+              $("#logN1,#logN2").css("display","block");
+              $("#logY1,#logY2").css("display","none");
+            }
+          }
+          init();
         
       })
     </script>

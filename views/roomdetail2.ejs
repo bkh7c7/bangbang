@@ -1,0 +1,164 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>방방</title>
+    <link rel="icon" href="images/customfavicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/userData.js"></script>
+
+
+    <style type="text/css">
+      @font-face {
+        font-family: "godob";
+        src: url(fonts/GodoB.ttf);
+      }
+
+      #navId{
+        background-color: #ffffff;
+      }
+      li{
+        font-family: godob;
+      }
+
+      .tester{
+        width: 70%;
+        padding: 12px 24px;
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+        color: #575756;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 95% center;
+        
+        border: 1px solid #575756;
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav id="navId" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><img style="cursor: pointer;" src="images/mainPic.png" onclick="location.href='main'"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li style="font-size: 15px;"><a href="roomdetail" style="color: red;">Search</a></li>
+            <li style="font-size: 15px; "><a href="release" style="color: black;">Release</a></li>
+            <li style="font-size: 15px; "><a href="roomate" style="color: black;">Roommates</a></li>
+            <li style="font-size: 15px; "><a href="community" style="color: black;">Community</a></li>
+            <li style="font-size: 15px; "><a href="notice" style="color: black;">Notice</a></li>
+            <li id="logN1" style="font-size: 15px;"><a href="signup" style="color:lightgrey;">Sign up</a></li>
+            <li id="logN2" style="font-size: 15px;"><a href="signin" style="color:lightgrey;">Sign in</a></li>
+            <li id="logY1" style="font-size: 15px;"><a href="main" style="color:lightgrey;">My Page</a></li>
+            <li id="logY2" style="font-size: 15px;"><a id="logoutId" style="color:lightgrey; cursor: pointer;">Log Out</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron" style="margin-top: 80px; background-color: #ffffff;">
+        <div style="width: 35%; height: 800px; float: left;">
+          <div style="width: 100%; height: 50%; background-image: url('images/room3_detail.jpg');"></div>
+          <div style="width: 100%; height: 50%; background-image: url('images/room1_detail.png');"> </div>
+        </div>
+        <div style="float: left;width: 65%; height: 800px;">
+          <div style="border-width: 2px; border-style:solid; border-color: #ffffff; border-bottom-color: black;margin: 0px 0px 0px 30px; height: 50px;">
+            <p style="font-family: godob; font-size: 30px;">상세정보</p>
+          </div>
+          <div style="height: 450px; margin-left: 30px;">
+            <div style="float: left; width: 25%; height: 100%;">
+              <div style="margin-top: 10px; height: 55px; font-family: godob; font-size: 16px;">주소</div>
+              <div style="height: 55px; font-family: godob; font-size: 16px;">임대 종류</div>
+              <div style="height: 55px; font-family: godob; font-size: 16px;">금액</div>
+              <div style="height: 55px; font-family: godob; font-size: 16px;">방 종류</div>
+              <div style="height: 55px; font-family: godob; font-size: 16px;">건물 종류</div>
+              <div style="height: 55px; font-family: godob; font-size: 16px;">면적</div>
+              <div style="height: 55px; font-family: godob; font-size: 16px;">총</div>
+              <div style="height: 55px; font-family: godob; font-size: 16px;">옵션</div>
+            </div>
+            <div style="float: left; width: 75%; height: 100%;">
+              <div style="margin-top: 10px; height: 55px; font-family: godob; font-size: 15px;">서울특별시 서대문구 연희동 XX-XX </div>
+              <div style="height: 55px; font-family: godob; font-size: 15px;">월세</div>
+              <div style="height: 55px; font-family: godob; font-size: 15px;">보증금 500만원 / 월세 60만원 + 관리비 5만원</div>
+              <div style="height: 55px; font-family: godob; font-size: 15px;">하숙</div>
+              <div style="height: 55px; font-family: godob; font-size: 15px;">단독주택</div>
+              <div style="height: 55px; font-family: godob; font-size: 15px;">7평</div>
+              <div style="height: 55px; font-family: godob; font-size: 15px;">2층 / 2층</div>
+              <div style="height: 55px; font-family: godob; font-size: 15px;">에어컨, 인터넷, 침대, 책상, 옷장, 전자레인지</div>
+            </div>
+          </div>
+          <div style="border-width: 2px; border-style:solid; border-color: #ffffff; border-top-color: black;margin: 10px 0px 0px 30px; height: 50px;">
+            <p style="font-family: godob; font-size: 30px;">리뷰</p>
+          </div>
+          <div style="height: 250px; margin-top: 10px; margin-left: 30px; font-family: godob; font-size: 16px;">
+            단독 주택이라 조용합니다 추천합니다
+          </div>
+        </div>
+        
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+        $("#logoutId").on("click", function(){
+            localStored = "";
+          })
+
+          function init(){
+            if(localStored !=""){
+              $("#logN1,#logN2").css("display","none");
+              $("#logY1,#logY2").css("display","block");
+            }else{
+              $("#logN1,#logN2").css("display","block");
+              $("#logY1,#logY2").css("display","none");
+            }
+          }
+          init();
+      })
+    </script>
+  </body>
+</html>>

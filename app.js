@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
+var FileStore = require('session-file-store');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -24,12 +26,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+
 app.get('/main', testRouter.main);
 app.get('/community', testRouter.community);
 app.get('/notice', testRouter.notice);
 app.get('/release', testRouter.release);
 app.get('/roomate', testRouter.roomate);
 app.get('/roomdetail', testRouter.roomdetail);
+app.get('/roomdetail1', testRouter.roomdetail1);
+app.get('/roomdetail2', testRouter.roomdetail2);
+app.get('/roomdetail3', testRouter.roomdetail3);
 app.get('/signup', testRouter.signup);
 app.get('/signin', testRouter.signin);
 

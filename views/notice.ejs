@@ -13,6 +13,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/userData.js"></script>
 
     <style type="text/css">
       @font-face {
@@ -80,8 +81,10 @@
             <li style="font-size: 15px; "><a href="roomate" style="color: black;">Roommates</a></li>
             <li style="font-size: 15px; "><a href="community" style="color: black;">Community</a></li>
             <li style="font-size: 15px; "><a href="notice" style="color: red;">Notice</a></li>
-            <li style="font-size: 15px;"><a href="signup" style="color:lightgrey;">Sign up</a></li>
-            <li style="font-size: 15px;"><a href="signin" style="color:lightgrey;">Sign in</a></li>
+            <li id="logN1" style="font-size: 15px;"><a href="signup" style="color:lightgrey;">Sign up</a></li>
+            <li id="logN2" style="font-size: 15px;"><a href="signin" style="color:lightgrey;">Sign in</a></li>
+            <li id="logY1" style="font-size: 15px;"><a href="main" style="color:lightgrey;">My Page</a></li>
+            <li id="logY2" style="font-size: 15px;"><a id="logoutId" style="color:lightgrey; cursor: pointer;">Log Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -171,33 +174,22 @@
     
       $(document).ready(function(){
         
-        $("#btnId1,#btnId2,#btnId3,#btnId4").on("click", function(){
-          $("#btnId1,#btnId2,#btnId3,#btnId4").css("background-color","#ffffff");
-          $("#btnId1,#btnId2,#btnId3,#btnId4").css("color","#000000");
+       
 
-          $(this).css("background-color", "#016740")
-          $(this).css("color", "#ffffff")
-        });
+        $("#logoutId").on("click", function(){
+            localStored = "";
+          })
 
-        $("#btnId11,#btnId22,#btnId33").on("click", function(){
-          $("#btnId11,#btnId22,#btnId33").css("background-color","#ffffff");
-          $("#btnId11,#btnId22,#btnId33").css("color","#000000");
-
-          $(this).css("background-color", "#016740")
-          $(this).css("color", "#ffffff")
-        });
-
-        $("#starId1,#starId2,#starId3,#starId4,#starId5").on("click", function(e){
-          $("#starId1,#starId2,#starId3,#starId4,#starId5").text("☆");
- 
-          for(var i = 0 ;  i < $(this).attr("id").substring(6); i++){
-            $("#starId"+(i+1)).text("★");
+          function init(){
+            if(localStored !=""){
+              $("#logN1,#logN2").css("display","none");
+              $("#logY1,#logY2").css("display","block");
+            }else{
+              $("#logN1,#logN2").css("display","block");
+              $("#logY1,#logY2").css("display","none");
+            }
           }
-          
-        });
-
-      
-        
+          init();
 
       });
 
